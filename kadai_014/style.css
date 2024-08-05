@@ -1,0 +1,27 @@
+html {
+  font-size: 20px; /* 親要素 */
+  text-align: center; /* 中央寄せ */
+}
+
+
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+}
+
+h1 {
+  font-family: 'Josefin Sansv',sans-serif;
+  font-size: 2rem;  /* 親要素の2倍 */
+}
+
+.sky {
+  color: skyblue;
+}
+
+.pink {
+  color: rgb(255, 192, 203);
+}
+
+.heading1 {
+  color: rgb(255, 192, 203);
+}
+
