@@ -1,0 +1,90 @@
+body,h1,p {
+  margin: 0px;
+}
+
+p,a {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px;  /* 下(bottom)の余白を20px 上（top)*/ 
+  background-color: rgb(244, 79, 79);
+  text-align: center; 
+  color: rgb(255, 255, 255);
+}
+
+main {
+  padding: 10px;
+}
+
+#parent {             /* id のとき＃から始まる*/
+  display: flex;
+  justify-content: space-between;  /* 子要素を均等に間隔を配置する */
+}
+
+.contents {
+  border: 3px solid rgb(238, 204, 204);  /* 線のスタイル */
+  flex-basis: 25%; /* 親要素の幅の25％ */
+  padding: 10px 15px 10px 15px; /* 要素内の上下10px、左右15pxの余白 */
+  margin: 20px 0px; /* 要素外の余白 */
+  display: flex; /* 横並び */
+  flex-direction: column; /* 子要素を縦に並べる*/
+  align-items: center; /* 子要素を水平に中央揃え*/
+}
+
+.contents h2 {
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+.contents h2::before { /* 要素の直前にコンテンツを追加する */
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+
+.contents p {
+  text-align: center;
+}
+
+.contents p #sky {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+.contents img {
+  margin: 10px 0px;
+  width: 70%;
+}
+
+footer {
+background-color:rgb(244, 79, 79);
+text-align: center;
+}
+
+footer a:link { /* 未訪問 */
+  color: (255, 255, 255);
+}
+
+footer a:visited { /* 訪問済 */
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover { /* カーソルがのると色が変わる */
+  color: rgb(245, 178, 168);
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+  font-size: 30px;
+  }
+
+  p {
+  font-size: 25px;
+  }
+
+  #parent {
+  display: flex;
+  flex-direction: column;
+  }
+}
