@@ -47,7 +47,7 @@ main {
   text-align: center;
 }
 
-.contents p #sky {
+p:nth-of-type(2)::first-letter {
   font-weight: bold;
   color: rgb(97, 206, 249);
 }
