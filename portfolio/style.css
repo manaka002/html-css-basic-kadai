@@ -4,13 +4,14 @@ PC、スマホ共通スタイル
 * 
 {
   box-sizing: border-box;
+  
 }
 
 body 
 {
   max-width: 1080px;
   margin: 0 auto 0 auto;
-  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+  font-family: 'Kaisei+Decol', serif !important;
   font-size: 15px;
   background-color: #FFFCF9;
 }
@@ -56,47 +57,53 @@ header
 }
 
 /* メインビジュアル*/
-#main-visual 
-{
+#main-visual {
   position: relative;
-  height: 400px;
+  height: 400px; /* セクションの高さ */
+  display: flex; /* Flexboxを使って要素を配置 */
+  align-items: center; /* 縦方向に中央揃え */
 }
 
 #main-message 
 {
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: #D04337;
   color: #FFFCF9;
   border-radius: 0 0 150px 0;
-  max-width: 620px;
-  height: 100%;
-  width: 100%;
+  width: calc(100% - 360px); /* 画像の幅を引いた残りの幅 */
+  min-height: 400px; /* 最低の高さを設定 */
+  padding: 20px; /* パディングはそのまま */
   z-index: 11;
+  position: relative; /* Flexboxで配置するために位置指定を相対に設定 */
 }
 
 #main-message > h1 
 {
   font-size: 60px;
   font-weight: bold;
-  margin: 100px 0 0 50px;
+  margin: 100px 0 0 0; /* 左のマージンをリセット */
 }
 
 #main-message > p 
 {
-  font-size: 28px;
-  margin: 0 0 0 50px;
+  font-size: 40px;
+  margin: 0; /* マージンをリセット */
 }
 
-#main-visual > img 
+.special-text
 {
-  max-width: 600px;
+  font-size: 20px !important;
+}
+
+#main-visual > img {
+  width: 700px; /* 画像の幅 */
+  height: 400px; /* 画像の高さ */
   position: absolute;
   top: 0;
   right: 0;
+  object-fit: cover; /* 画像のアスペクト比を保持しつつ、領域に合わせる */
   z-index: 10;
 }
+
 
 /* 見出し */
 h2 
@@ -141,7 +148,9 @@ h3
 
 .concept-photo 
 {
-  width: 80%;
+  width: 300px;
+  height: 200px;
+
 }
 
 /* プロダクト */
@@ -193,7 +202,10 @@ h3
 /* 画像 */
 .product-photo 
 {
-  width: 100%;
+  width: 100%; /* 幅を親要素に合わせる */
+  height: 80%; /* 高さも親要素に合わせる */
+  object-fit: cover; /* アスペクト比を維持しながら、画像を枠にフィットさせる */
+  border-radius: 0 0 40px 40px;
 }
 
 /* 説明文の枠 */
