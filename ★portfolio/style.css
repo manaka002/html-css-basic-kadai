@@ -395,11 +395,13 @@ margin-bottom: 50px;
 
   #nav-pc ul 
   {
+    font-size: 10px;
     display: flex; /* 横並びにする */
     padding-left: 0;
     margin: 0 auto; /* 横方向の中央揃え */
     list-style: none; /* デフォルトのリストスタイルを削除 */
     justify-content: flex-end;/* displayflexを使用して右寄せ */
+    
   }
 
   #nav-pc li
